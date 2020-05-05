@@ -5,7 +5,6 @@ This repository contains the source code for https://coaching-neubauer.de/, a pe
 * [Netlify](https://netlify.com). Free global CDN, continuous deployment, and serverless functions.
 * [Next.js](https://nextjs.org). Server-side rendering and static HTML with React.
 * [Material UI](https://material-ui.com). React components using Material Design.
-* [Cloudinary](https://cloudinary.com). Transformation, caching, and CDN for images and other large media.
 * [Nodemailer](https://nodemailer.com). SMTP email handling in node.js.
 
 The website was designed using the following tools and resources:
@@ -30,8 +29,6 @@ For all of the services liste above, this website is currently operating under t
   * 3 projects
   * 30-day version history
   * Up to 2 editors
-* **Cloudinary**
-  * 25 credits*
   
 **1 Credit equals 1000 transformations or 1GB of managed storage or 1GB of monthly viewing bandwidth or 500 SD video processing seconds or 250 HD video processing seconds*
 

@@ -81,7 +81,7 @@ export default function Index() {
       <Nav />
       <Header
         title="Einzelcoaching"
-        image="plume-2428666_1920_l2gnyn.jpg"
+        image="barley-field.jpg"
         position="50% 65%"
       />
       <Box

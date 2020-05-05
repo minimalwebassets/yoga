@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core';
 import Nav from '../src/Nav';
 import Footer from '../src/Footer';
-import url from '../src/cloudinary';
 import Header from '../src/Header';
 import Head from '../src/Head';
 
@@ -126,8 +125,8 @@ export default function Index() {
       <Nav />
       <Header
         title="Organisatorisches"
-        image="balance-110850_hacpoy.jpg"
-        position="50% 60%"
+        image="/avenue.jpg"
+        position="50% 40%"
       />
       {vorgespraech}
       <Divider />

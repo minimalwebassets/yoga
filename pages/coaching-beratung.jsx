@@ -181,7 +181,7 @@ export default function CoachingBeratung() {
       <Nav />
       <Header
         title="Coaching & Beratung"
-        image="plume-2428666_1920_l2gnyn.jpg"
+        image="/barley-field.jpg"
         position="50% 65%"
       />
       <Box

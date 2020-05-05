@@ -7,13 +7,12 @@ import {
   useTheme,
   useMediaQuery,
 } from '@material-ui/core';
-import url from './cloudinary';
 
 const useStyles = makeStyles({
   header: (props) => ({
     backgroundRepeat: 'no-repeat',
     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(${
-      url(props.image)
+      props.image
     })`,
     backgroundSize: 'cover',
     backgroundPosition: props.position,

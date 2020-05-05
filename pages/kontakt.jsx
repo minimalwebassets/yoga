@@ -140,8 +140,8 @@ function Kontakt() {
       <Nav />
       <Header
         title="Kontakt"
-        image="abendstimmung-4315445_1920_kckmcx.jpg"
-        position="50% 65%"
+        image="/mushroom.jpg"
+        position="50% 40%"
       />
       <Box
         py={isMobile ? 4 : 8}

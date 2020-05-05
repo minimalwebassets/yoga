@@ -10,7 +10,6 @@ import {
 import Head from '../src/Head';
 import Nav from '../src/Nav';
 import Footer from '../src/Footer';
-import url from '../src/cloudinary';
 
 const slantHeight = 16;
 const slantHeightMobile = 13;
@@ -18,8 +17,9 @@ const slantHeightMobile = 13;
 const useStyles = makeStyles((theme) => ({
   header: {
     backgroundSize: 'cover',
-    background: `no-repeat url(${url('sandstone-467714_1920_um7bbw.jpg')})`,
+    background: `no-repeat url(/forest.jpg)`,
     backgroundAttachment: 'fixed',
+    backgroundPositionY: '80%',
   },
   title: {
     '& *': {
@@ -71,16 +71,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
   },
-  bridge: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${
-      url('bridge-192982_jnk1qi.jpg')
-    })`,
+  railway: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/railway.jpg)`,
     backgroundPosition: '50% 25%',
   },
-  pier: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${
-      url('pier-569314_1920_wkgo7m.jpg')
-    })`,
+  dawn: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/dawn.jpg)`,
     backgroundPosition: '50% 25%',
   },
   bulletList: {
@@ -272,12 +268,12 @@ export default function Index() {
       {sectionOne}
       {imageHeadline(
         <>Stärken effektiv einsetzen</>,
-        styles.bridge,
+        styles.railway,
       )}
       {sectionTwo}
       {imageHeadline(
         <>Leben sinvoll nutzen</>,
-        styles.pier,
+        styles.dawn,
       )}
       {sectionThree}
       <Footer />
