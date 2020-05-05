@@ -5,14 +5,14 @@ import { Button } from '@material-ui/core';
 import { MailOutline } from '@material-ui/icons';
 
 const ButtonContact = ({ color, queryString = '' }) => (
-  <Link href={`/kontakt${queryString}`} passHref>
+  <Link href={`/contact${queryString}`} passHref>
     <Button
       component="a"
       variant="contained"
       color={color}
       startIcon={<MailOutline />}
     >
-      Kontakt
+      Contact
     </Button>
   </Link>
 );

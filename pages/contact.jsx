@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Kontakt() {
+function Contact() {
   const styles = useStyles();
   const theme = useTheme();
   const router = useRouter();
@@ -136,10 +136,10 @@ function Kontakt() {
 
   return (
     <>
-      <Head title="Kontakt" />
+      <Head title="Contact" />
       <Nav />
       <Header
-        title="Kontakt"
+        title="Contact"
         image="/mushroom.jpg"
         position="50% 40%"
       />
@@ -165,4 +165,4 @@ function Kontakt() {
   );
 }
 
-export default Kontakt;
+export default Contact;

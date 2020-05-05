@@ -64,8 +64,8 @@ const Nav = () => {
     { label: 'Organisatorisches', path: '/organisatorisches' },
     { label: 'Über mich', path: '/uber-mich' },
     {
-      label: 'Kontakt',
-      path: '/kontakt',
+      label: 'Contact',
+      path: '/contact',
       component: <ButtonContact color="primary" />,
       icon: <MailOutline />,
     },

@@ -8,7 +8,7 @@ import theme from '../src/theme';
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="de">
+      <html lang="en">
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
