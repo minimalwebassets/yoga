@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 import React from 'react';
-import Link from 'next/link';
 import {
   makeStyles,
   Box,
@@ -11,16 +10,14 @@ import {
   Card,
   CardActions,
   CardContent,
-  Button,
 } from '@material-ui/core';
 import Nav from '../src/Nav';
 import Footer from '../src/Footer';
 import ButtonContact from '../src/ButtonContact';
-import Einzelcoaching from '../svg/einzelcoaching.svg';
-import Gruppencoaching from '../svg/gruppencoaching.svg';
+import Mindfulness from '../svg/undraw_mindfulness.svg';
+import Yoga from '../svg/undraw_yoga.svg';
 import Header from '../src/Header';
 import Head from '../src/Head';
-
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -47,7 +44,6 @@ export default function CoachingBeratung() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const card = ({
-    link,
     icon,
     headline,
     paragraph,
@@ -74,17 +70,7 @@ export default function CoachingBeratung() {
             justifyContent="center"
             my={1}
           >
-            <Link href={link} passHref>
-              <Button
-                className={styles.cardButton}
-                component="a"
-                size="small"
-                color="secondary"
-              >
-                Details
-              </Button>
-            </Link>
-            <ButtonContact queryString={`?betreff=${headline}`} />
+            <ButtonContact queryString={`?subject=${headline}`} />
           </Box>
         </CardActions>
       </CardContent>
@@ -98,18 +84,17 @@ export default function CoachingBeratung() {
     </Card>
   );
 
-  const einzelcoaching = card({
-    link: '/einzelcoaching',
-    icon: <Einzelcoaching className={styles.cardIllustration} />,
-    headline: 'Einzelcoaching',
+  const beginnerTraining = card({
+    icon: <Yoga className={styles.cardIllustration} />,
+    headline: 'Beginner Training',
     paragraph: (
       <>
-        {/* eslint-disable-next-line max-len */}
         <Typography
           variant={isMobile ? 'body2' : 'body1'}
           align="left"
         >
-          Jeder von uns hat sich schon mindestens eine der folgenden Fragen gestellt:
+          {/* eslint-disable-next-line max-len */}
+          Get a kick-start on your yoga journey with this beginner course. Our trainer will meet you and your friends or colleagues in a location of your preference, maybe at the office or a local park. Here&apos;s what you will accomplish:
         </Typography>
         <Box className={styles.questions} my={2}>
           <Typography
@@ -117,13 +102,13 @@ export default function CoachingBeratung() {
             component="ul"
           >
             <li>
-              Wie kann ich mich gut präsentieren?
+              Core strength, balance, and flexibility
             </li>
             <li>
-              Wie bewältige ich Stress in der Arbeit oder privat?
+              Reduced stress levels and boosted energy
             </li>
             <li>
-              Wie meistere ich Krisen in meinem Leben?
+              Awareness of your inner self
             </li>
           </Typography>
         </Box>
@@ -132,25 +117,23 @@ export default function CoachingBeratung() {
           align="left"
         >
           {/* eslint-disable-next-line max-len */}
-          Für diese Fragen finden wir gemeinsam Antworten. Im Einzelcoaching entwickeln wir hierfür individuelle Strategien.
+          Our pricing varies based on schedules, locations and group sizes. Please send us a line and we&apos;ll get you started as soon as possible.
         </Typography>
       </>
     ),
   });
 
-  const gruppencoaching = card({
-    link: '/coaching-in-kleingruppen',
-    icon: <Gruppencoaching className={styles.cardIllustration} />,
-    headline: 'Coaching in Kleingruppen',
+  const mindfulness = card({
+    icon: <Mindfulness className={styles.cardIllustration} />,
+    headline: 'Mindfulness',
     paragraph: (
       <>
-        {/* eslint-disable-next-line max-len */}
         <Typography
           variant={isMobile ? 'body2' : 'body1'}
           align="left"
         >
           {/* eslint-disable-next-line max-len */}
-          Im Zusammenleben mit unseren Mitmenschen werden wir häufig mit folgenden Themen konfroniert:
+          Take a deep dive into the yogic medidation and mindfulness practices. Discover your inner peace and assume full control over your mind and soul. You will accomplish the following:
         </Typography>
         <Box className={styles.questions} my={2}>
           <Typography
@@ -158,10 +141,13 @@ export default function CoachingBeratung() {
             component="ul"
           >
             <li>
-              Wie kommuniziere ich mit anderen in einer guten Art und Weise?
+              A high level of mindfulness and self-awareness
             </li>
             <li>
-              Wie gehen wir in der Familie oder im Team mit Konflikten um?
+              Increased confidence and inner peace
+            </li>
+            <li>
+              Deep relaxation and bliss
             </li>
           </Typography>
         </Box>
@@ -169,7 +155,8 @@ export default function CoachingBeratung() {
           variant={isMobile ? 'body2' : 'body1'}
           align="left"
         >
-          Wir erarbeiten gemeinsam Richtlinien für einen guten und entspannten Umgang in der Gruppe.
+          {/* eslint-disable-next-line max-len */}
+          Gather a group of friends or colleagues and inform us about your preferences. We&apos;ll take care of the rest.
         </Typography>
       </>
     ),
@@ -177,10 +164,10 @@ export default function CoachingBeratung() {
 
   return (
     <>
-      <Head title="Coaching & Beratung" />
+      <Head title="Yoga Training" />
       <Nav />
       <Header
-        title="Coaching & Beratung"
+        title="Yoga Training"
         image="/barley-field.jpg"
         position="50% 65%"
       />
@@ -188,8 +175,8 @@ export default function CoachingBeratung() {
         display={isMobile ? 'block' : 'flex'}
         justifyContent="center"
       >
-        {einzelcoaching}
-        {gruppencoaching}
+        {beginnerTraining}
+        {mindfulness}
       </Box>
       <Footer />
     </>

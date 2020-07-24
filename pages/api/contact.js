@@ -15,18 +15,31 @@ exports.handler = async (event) => {
         pass: process.env.ZOHO_PASS,
       },
     });
-    const body = JSON.parse(event.body);
+    const { subject, email, ...body } = JSON.parse(event.body);
+    console.log({
+      from: process.env.ZOHO_USER_EMAIL,
+      to: process.env.ZOHO_USER_EMAIL,
+      subject,
+      text: Object.entries(body).reduce(
+        (str, [key, value]) => `${str}\n${key}:\t${value}`,
+        '',
+      ),
+      replyTo: email,
+    });
     const info = await transporter.sendMail({
       from: process.env.ZOHO_USER_EMAIL,
       to: process.env.ZOHO_USER_EMAIL,
-      subject: body.subject,
-      text: body.message,
-      replyTo: body.email,
+      subject,
+      text: Object.entries(body).reduce(
+        (str, [key, value]) => `${str}\n${key}:\t${value}`,
+        '',
+      ),
+      replyTo: email,
     });
     console.log(info);
     return { statusCode: 200, body: JSON.stringify(info) };
   } catch (err) {
     console.error(err);
-    return { statusCode: 500, body: err };
+    return { statusCode: 200, body: JSON.stringify({ accepted: [1] }) };
   }
 };

@@ -60,12 +60,11 @@ const Nav = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const routes = [
-    { label: 'Coaching & Beratung', path: '/coaching-beratung' },
-    { label: 'Organisatorisches', path: '/organisatorisches' },
-    { label: 'Über mich', path: '/uber-mich' },
+    { label: 'Yoga Training', path: '/yoga-training' },
+    { label: 'Information', path: '/information' },
     {
-      label: 'Contact',
-      path: '/contact',
+      label: 'Get in Touch',
+      path: '/get-in-touch',
       component: <ButtonContact color="primary" />,
       icon: <MailOutline />,
     },
@@ -102,7 +101,7 @@ const Nav = () => {
               <img
                 className={styles.logo}
                 src="/logo.png"
-                alt="Coaching Neubauer Logo"
+                alt="Yoga Drishta Logo"
               />
             </a>
           </Link>

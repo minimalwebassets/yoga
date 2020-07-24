@@ -19,14 +19,13 @@ import Footer from '../src/Footer';
 import Header from '../src/Header';
 import Head from '../src/Head';
 
-
 const useStyles = makeStyles((theme) => ({
   sendIcon: {
     marginLeft: theme.spacing(1),
   },
 }));
 
-function Contact() {
+export default function Contact() {
   const styles = useStyles();
   const theme = useTheme();
   const router = useRouter();
@@ -37,8 +36,11 @@ function Contact() {
     <Formik
       enableReinitialize
       initialValues={{
+        subject: router.query.subject || '',
         email: '',
-        subject: router.query.betreff || '',
+        groupSize: '',
+        schedule: '',
+        location: '',
         message: '',
       }}
       onSubmit={async (values, { setSubmitting }) => {
@@ -47,7 +49,7 @@ function Contact() {
           setSubmitting(false);
           setIsError(false);
           if (data.accepted.length > 0) {
-            router.push('/danke');
+            router.push('/thanks');
           }
         } catch (err) {
           // eslint-disable-next-line no-console
@@ -61,21 +63,39 @@ function Contact() {
           {
             [
               {
+                name: 'subject',
+                type: 'text',
+                label: 'Subject',
+                required: true,
+              },
+              {
                 name: 'email',
                 type: 'email',
                 required: true,
-                label: 'E-Mail',
+                label: 'Your e-mail',
               },
               {
-                name: 'subject',
+                name: 'groupSize',
                 type: 'text',
-                label: 'Betreff',
+                label: 'How many people? (at least 5)',
+                required: true,
+              },
+              {
+                name: 'schedule',
+                type: 'text',
+                label: 'Your weekly training schedule',
+                multiline: true,
+                rows: 2,
+              },
+              {
+                name: 'location',
+                type: 'text',
+                label: 'Where would you like to train?',
               },
               {
                 name: 'message',
                 type: 'text',
-                required: true,
-                label: 'Nachricht',
+                label: 'Additional information',
                 multiline: true,
                 rows: 10,
               },
@@ -97,8 +117,7 @@ function Contact() {
                 multiline={multiline}
                 rows={rows}
                 placeholder={placeholder}
-                variant="outlined"
-                size="small"
+                variant="filled"
                 margin="normal"
                 fullWidth
                 InputLabelProps={{ shrink: true }}
@@ -116,7 +135,7 @@ function Contact() {
               type="submit"
               disabled={isSubmitting}
             >
-              Senden
+              Send
               <Send className={styles.sendIcon} />
             </Fab>
           </Box>
@@ -126,7 +145,7 @@ function Contact() {
               align="right"
               color="error.main"
             >
-              Etwas ist schief gelaufen. Bitte versuche es erneut.
+              Something went wrong. Please refresh the page and try again.
             </Box>
           )}
         </Form>
@@ -136,10 +155,10 @@ function Contact() {
 
   return (
     <>
-      <Head title="Contact" />
+      <Head title="Contact Us" />
       <Nav />
       <Header
-        title="Contact"
+        title="Contact Us"
         image="/mushroom.jpg"
         position="50% 40%"
       />
@@ -148,12 +167,12 @@ function Contact() {
       >
         <Container maxWidth={isMobile ? 'xs' : 'md'}>
           <Card>
-            <Box p={6}>
+            <Box p={isMobile ? 4 : 6}>
               <Typography>
                 {/* eslint-disable-next-line max-len */}
-                Bei Fragen zu den Einzel- oder Gruppencoachings füllen Sie bitte das Kontakfomular aus oder Sie kontaktieren mich telefonisch oder per Mail. Sie werden zeitnah eine Antwort erhalten, je nach Wunsch schriftlich oder telefonisch.
+                Ready to start your yoga journey? Please provide us with your contact details as well as some basic information about your group and we&apos;ll get you set up.
               </Typography>
-              <Box pt={2} px={4}>
+              <Box pt={2} px={isMobile ? 0 : 4}>
                 {contactForm}
               </Box>
             </Box>
@@ -164,5 +183,3 @@ function Contact() {
     </>
   );
 }
-
-export default Contact;

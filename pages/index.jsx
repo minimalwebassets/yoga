@@ -70,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
+    color: 'rgba(255, 255, 255, 0.8)',
   },
   railway: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/railway.jpg)`,
@@ -78,11 +79,6 @@ const useStyles = makeStyles((theme) => ({
   dawn: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/dawn.jpg)`,
     backgroundPosition: '50% 25%',
-  },
-  bulletList: {
-    '& li': {
-      marginBottom: theme.spacing(2),
-    },
   },
 }));
 
@@ -118,14 +114,14 @@ export default function Index() {
             component="h1"
             align="center"
           >
-            Coaching Neubauer
+            Yoga Drishti
           </Typography>
           <Box mt={isMobile ? 1 : 2}>
             <Typography
               variant={isMobile ? 'caption' : 'h5'}
               component="h2"
             >
-              Coaching — Training — Beratung
+              Become one with your inner self
             </Typography>
           </Box>
         </Box>
@@ -159,34 +155,33 @@ export default function Index() {
     </Box>
   );
   const sectionOne = section({
-    headline: <>Wie entwickle ich mich beruflich weiter?</>,
+    headline: <>Become the best version of yourself</>,
     paragraph: (
       <Typography
         variant={isMobile ? 'body2' : 'body1'}
         align="left"
       >
         {/* eslint-disable-next-line max-len */}
-        Jeder Mensch hat besondere Stärken, welche - bewusst oder unbewusst - unsere Berufswahl beeinflussen. Ich begleite Sie auf der Suche nach den eigenen Stärken und gebe Ihnen Strategien an die Hand, wie Sie diese sinnvoll nutzen und effektiv einsetzen können. Die Basis für die Umsetzung der eigenen Fähigkeiten und Ideen ist eine gelingende Kommunikation. Unstimmigkeiten und Missverständnisse entstehen oftmals aufgrund von Kommunikationsproblemen. Durch ein gezieltes Training arbeite ich mit Ihnen an der Optimierung von Gesprächsführung und Präsentation.
+        The yogic exercises and meditation are specially designed to make you more familiar with your own body and soul. By engaging in these practices, you will find yourself becoming aware of every feeling, every breath and every thought. You will unlock the ability to build your own character and your own life on a strong foundation.
       </Typography>
     ),
   });
   const sectionTwo = section({
-    headline: <>Was kann mir zu einem erfüllten Leben verhelfen?</>,
+    headline: <>Take a break from the world</>,
     paragraph: (
       <Typography
         variant={isMobile ? 'body2' : 'body1'}
         align="left"
       >
         {/* eslint-disable-next-line max-len */}
-        Unsere Lebensqualität hängt von verschiedenen Faktoren ab, Familie, Beruf, eigenes Befinden - körperlich und seelisch. Oftmals haben wir Lebensphasen zu meistern, in denen uns viele Steine in den Weg gelegt werden. Das kann sowohl die berufliche Karriere als auch den privaten Alltag betreffen. Ich unterstütze Sie dabei, ihre eigenen Wünsche zu erkennen und danach zu handeln, Probleme zu meistern und ein harmonischeres Lebensgefühl zu erlangen.
+        Practicing yoga and meditation will allow you to reach a deep level of physical and mental relaxation. Whether you feel overwhelmed, hyperactive, or exhausted, even a short exercise will help you refresh your mind and body, energizing you for whatever challenge lies ahead.
       </Typography>
     ),
   });
   const sectionThree = section({
-    headline: <>Welchen Nutzen ziehe ich aus einem Coaching?</>,
+    headline: <>What&apos;s in it for me?</>,
     paragraph: (
       <Typography
-        className={styles.bulletList}
         variant={isMobile ? 'body2' : 'body1'}
         align="left"
         component="ul"
@@ -194,38 +189,38 @@ export default function Index() {
         {
           [
             {
-              title: 'Orientierung',
+              title: 'Stress Relief',
               text: (
                 <>
                   {/* eslint-disable-next-line max-len */}
-                  Die Schnelllebigkeit und Vielfalt unserer Zeit führen verstärkt dazu, dass es uns schwerfällt, klare Entscheidungen zu treffen. Sie werden durch einen neutralen Ansprechpartner dabei unterstützt, Wichtiges von Unwichtigem zu trennen und einen sinnvollen Weg für die Zukunft zu suchen.
+                  Yoga practice is an excellent way to find your inner peace and to step away from the constant noise of daily life.
                 </>
               ),
             },
             {
-              title: 'Problemlösung',
+              title: 'Relaxation',
               text: (
                 <>
                   {/* eslint-disable-next-line max-len */}
-                  Viele berufliche oder private Situationen nehmen uns so gefangen, dass wir unter Dauerbelastung und Stress stehen. Durch eine professionelle Unterstützung können Ihnen andere Sichtweisen aufgezeigt und Strategien für den Umgang mit Schwierigkeiten gefunden werden.
+                  The exercises will help relax your mind as well as your muscles through stretching and meditation.
                 </>
               ),
             },
             {
-              title: 'Kompetenzerweiterung',
+              title: 'Strength',
               text: (
                 <>
                   {/* eslint-disable-next-line max-len */}
-                  Durch ein konstruktives Feedback und eine fachkundige Beratung erweitern Sie Ihre Kompetenzen für den Beruf und im zwischenmenschlichen Bereich.
+                  More advanced techniques use your own body as the ultimate exercise tool, activating all of your muscles to build immense strength.
                 </>
               ),
             },
             {
-              title: 'Zeit',
+              title: 'Flexibility',
               text: (
                 <>
                   {/* eslint-disable-next-line max-len */}
-                  Sie nehmen sich Zeit für sich und nutzen diese nur für Ihre Person. Es ist jemand da, der Ihnen zuhört, Ihre Probleme, Wünsche und Ideen ernst nimmt und mit Ihnen gemeinsam passende Lösungen findet.
+                  By carefully progressing through various poses, you will become more dexterous than you can imagine!
                 </>
               ),
             },
@@ -262,17 +257,17 @@ export default function Index() {
   );
   return (
     <>
-      <Head title="Coaching – Training – Beratung" />
+      <Head title="Yoga Drishta – For Your Body and Soul" />
       <Nav />
       {header}
       {sectionOne}
       {imageHeadline(
-        <>Stärken effektiv einsetzen</>,
+        <>Enjoy the Journey</>,
         styles.railway,
       )}
       {sectionTwo}
       {imageHeadline(
-        <>Leben sinvoll nutzen</>,
+        <>Find your Inner Spirit</>,
         styles.dawn,
       )}
       {sectionThree}

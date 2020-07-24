@@ -11,7 +11,6 @@ import {
   Phone,
 } from '@material-ui/icons';
 import ButtonContact from './ButtonContact';
-import Link from './Link';
 
 const Footer = () => {
   const theme = useTheme();
@@ -22,7 +21,7 @@ const Footer = () => {
     <Box
       display="flex"
       pb={isMobile ? 1 : 2}
-      px={isMobile ? 0 : 2}
+      // px={isMobile ? 0 : 2}
       alignItems="center"
     >
       {icon}
@@ -42,13 +41,13 @@ const Footer = () => {
   const email = contact({
     icon: <MailOutline color="secondary" />,
     title: <>Email: </>,
-    info: <>kontakt[at]coaching-neubauer.de</>,
+    info: <>yogadrishta[at]example.com</>,
   });
 
   const phone = contact({
     icon: <Phone color="secondary" />,
-    title: <>Telefon: </>,
-    info: <>+49 178 11 24 543</>,
+    title: <>Phone: </>,
+    info: <>+55 555 5555</>,
   });
 
   return (
@@ -60,49 +59,42 @@ const Footer = () => {
     >
       <Container maxWidth={isMobile ? 'xs' : 'lg'}>
         <Box
-          display={isMobile ? 'block' : 'flex'}
-          justifyContent="space-evenly"
+          display="flex"
+          justifyContent="space-between"
           alignItems="center"
+          flexDirection={isMobile ? 'column' : 'row'}
         >
+          {
+            !isMobile && (
+              <Box flexBasis="33%">
+                {email}
+              </Box>
+            )
+          }
           <Box
-            width="300px"
-            display={isMobile ? 'none' : ''}
+            flexBasis="33%"
+            display="flex"
+            alignItems="center"
+            flexDirection="column"
           >
-            {email}
-            {phone}
-          </Box>
-          <Box>
-            <Box pb={2} align="center">
+            <Box pb={2}>
               <Typography variant={isMobile ? 'body2' : 'body1'}>
-                Bereit für Ihr individuelles Coaching?
-              </Typography>
-              <Typography variant={isMobile ? 'body2' : 'body1'}>
-                Kontaktieren Sie mich hier:
+                Ready to start your yoga journey?
               </Typography>
             </Box>
-            <Box align="center">
+            <Box>
               <ButtonContact />
             </Box>
           </Box>
           <Box
-            width="xs"
-            display={isMobile ? '' : 'none'}
-            pt={2}
+            flexBasis="33%"
+            display="flex"
+            justifyContent={isMobile ? 'center' : 'flex-end'}
+            flexDirection={isMobile ? 'column' : 'row'}
+            pt={isMobile ? 2 : 0}
           >
-            {email}
+            {isMobile && email}
             {phone}
-          </Box>
-          <Box
-            width={isMobile ? 'xs' : '300px'}
-            align={isMobile ? '' : 'center'}
-          >
-            <Link
-              href="/impressum"
-              color="inherit"
-              variant={isMobile ? 'caption' : 'body2'}
-            >
-              Impressum
-            </Link>
           </Box>
         </Box>
       </Container>
