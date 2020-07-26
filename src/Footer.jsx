@@ -41,7 +41,7 @@ const Footer = () => {
   const email = contact({
     icon: <MailOutline color="secondary" />,
     title: <>Email: </>,
-    info: <>yogadrishta[at]example.com</>,
+    info: <>yogadrishti[at]example.com</>,
   });
 
   const phone = contact({
