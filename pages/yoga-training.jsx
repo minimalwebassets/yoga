@@ -172,8 +172,10 @@ export default function CoachingBeratung() {
         position="50% 65%"
       />
       <Box
-        display={isMobile ? 'block' : 'flex'}
+        display="flex"
         justifyContent="center"
+        flexDirection={isMobile ? 'column' : 'row'}
+        alignItems="center"
       >
         {beginnerTraining}
         {mindfulness}
