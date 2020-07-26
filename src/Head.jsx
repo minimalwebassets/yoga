@@ -5,7 +5,7 @@ import NextHead from 'next/head';
 const Head = ({ title }) => (
   <NextHead>
     <title>
-      {`${title} | Yoga Drishta`}
+      {`${title} | Yoga Drishti`}
     </title>
   </NextHead>
 );
