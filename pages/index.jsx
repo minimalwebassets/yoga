@@ -257,7 +257,7 @@ export default function Index() {
   );
   return (
     <>
-      <Head title="Yoga Drishta – For Your Body and Soul" />
+      <Head title="Become one with your inner self" />
       <Nav />
       {header}
       {sectionOne}
