@@ -24,9 +24,9 @@ jobs:
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
-            ${{ steps.netlify.outputs.url }}/backgrounds/
-            ${{ steps.netlify.outputs.url }}/templates/
-            ${{ steps.netlify.outputs.url }}/templates/yoga/
-            ${{ steps.netlify.outputs.url }}/templates/party/
+            ${{ steps.netlify.outputs.url }}/yoga-training/
+            ${{ steps.netlify.outputs.url }}/information/
+            ${{ steps.netlify.outputs.url }}/get-in-touch/
+            ${{ steps.netlify.outputs.url }}/thanks/
           configPath: "./.lighthouserc.json"
           uploadArtifacts: true
