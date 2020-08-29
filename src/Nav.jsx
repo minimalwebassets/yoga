@@ -11,6 +11,7 @@ import { MailOutline } from '@material-ui/icons';
 import Link from 'next/link';
 import NavDrawer from './NavDrawer';
 import ButtonContact from './ButtonContact';
+import cloudinary from './cloudinary';
 
 const navHeight = 16;
 const navHeightMobile = 13;
@@ -100,7 +101,7 @@ const Nav = () => {
             <a>
               <img
                 className={styles.logo}
-                src="/logo.png"
+                src={cloudinary.url('yoga/logo')}
                 alt="Yoga Drishta Logo"
               />
             </a>

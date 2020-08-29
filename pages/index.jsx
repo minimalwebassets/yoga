@@ -10,14 +10,16 @@ import {
 import Head from '../src/Head';
 import Nav from '../src/Nav';
 import Footer from '../src/Footer';
+import cloudinary from '../src/cloudinary';
 
 const slantHeight = 16;
 const slantHeightMobile = 13;
+const cloudinaryUrl = (slug) => cloudinary.url(`yoga/${slug}`, { fetchFormat: 'auto' });
 
 const useStyles = makeStyles((theme) => ({
   header: {
     backgroundSize: 'cover',
-    background: `no-repeat url(/forest.jpg)`,
+    background: `no-repeat url(${cloudinaryUrl('forest')})`,
     backgroundAttachment: 'fixed',
     backgroundPositionY: '80%',
   },
@@ -73,11 +75,11 @@ const useStyles = makeStyles((theme) => ({
     color: 'rgba(255, 255, 255, 0.8)',
   },
   railway: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/railway.jpg)`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${cloudinaryUrl('railway')})`,
     backgroundPosition: '50% 25%',
   },
   dawn: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/dawn.jpg)`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${cloudinaryUrl('dawn')})`,
     backgroundPosition: '50% 25%',
   },
 }));

@@ -117,7 +117,7 @@ export default function Contact() {
                 multiline={multiline}
                 rows={rows}
                 placeholder={placeholder}
-                variant="filled"
+                variant="outlined"
                 margin="normal"
                 fullWidth
                 InputLabelProps={{ shrink: true }}
