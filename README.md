@@ -5,6 +5,7 @@ This repository contains the source code for https://yoga.minimalwebassets.com/,
 * [Netlify](https://netlify.com). Free global CDN, continuous deployment, and serverless functions.
 * [Next.js](https://nextjs.org). Server-side rendering and static HTML with React.
 * [Material UI](https://material-ui.com). React components using Material Design.
+* [Cloudinary](https://cloudinary.com). Transformation, caching, and CDN for images and other large media.
 * [Nodemailer](https://nodemailer.com). SMTP email handling in node.js.
 
 The website was designed using the following tools and resources:
