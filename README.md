@@ -29,6 +29,8 @@ For all of the services liste above, this website is currently operating under t
   * 3 projects
   * 30-day version history
   * Up to 2 editors
+* **Cloudinary**
+  * 25 credits*
   
 **1 Credit equals 1000 transformations or 1GB of managed storage or 1GB of monthly viewing bandwidth or 500 SD video processing seconds or 250 HD video processing seconds*
 
