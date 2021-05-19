@@ -1,6 +1,6 @@
-# Coaching Neubauer
+# Yoga
 
-This repository contains the source code for https://coaching-neubauer.de/, a personal landing page for the speech training services offered by the developers' mother and mother-in-law. It is designed using [JAMStack](https://jamstack.org) principles and uses the following frameworks and technologies as primary building blocks:
+This repository contains the source code for https://yoga.minimalwebassets.com/, a template of a landing page for an imaginary yoga studio. It is designed using [JAMStack](https://jamstack.org) principles and uses the following frameworks and technologies as primary building blocks:
 
 * [Netlify](https://netlify.com). Free global CDN, continuous deployment, and serverless functions.
 * [Next.js](https://nextjs.org). Server-side rendering and static HTML with React.
